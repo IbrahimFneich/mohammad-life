@@ -1,0 +1,4 @@
+.DS_Store
+__pycache__/
+dev/tts-cache/
+dev/shots/
