@@ -1,0 +1,24 @@
+/* Badr: the words keep to a right-hand column over the sky; the Prophet, the shelter, the tree and the field take
+   the left and centre. On phones the words sit on top over a scrim and the action keeps the lower half. */
+.badr .stage { background: #0c0d12; }
+.badr .bd-t { top: 7vh; max-width: min(100%, 34rem); }
+.badr .bd-t::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -6vw -24vh -14vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(10, 9, 9, .6), rgba(10, 9, 9, .28) 60%, rgba(10, 9, 9, 0));
+}
+.badr .kick { font-size: .9rem; letter-spacing: .02em; }
+.badr .cap { max-width: 38ch; text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 22px rgba(0, 0, 0, .85); }
+.badr .ayah { font-size: clamp(1.2rem, 1.3vw + .6rem, 1.8rem); line-height: 2.05; text-shadow: 0 2px 26px rgba(10, 6, 2, .95), 0 0 2px rgba(10, 6, 2, .8); }
+.badr .bd-big .ayah { font-size: clamp(1.6rem, 2.2vw + .6rem, 2.8rem); line-height: 2; }
+.badr .bd-sub { margin-top: 1.1rem; font-size: 1rem; }
+.badr .bd-sub .src { margin-top: .3rem; }
+
+@media (max-width: 640px) {
+  .badr .bd-t { top: 4vh; right: 0; left: 0; max-width: 100%; }
+  .badr .bd-t::before { inset: -6vh 0 -9vh; background: linear-gradient(to bottom, rgba(10, 9, 9, .82) 58%, rgba(10, 9, 9, 0)); }
+  .badr .cap { font-size: .95rem; line-height: 1.8; }
+  .badr .ayah { font-size: 1.12rem; line-height: 1.95; }
+  .badr .bd-big .ayah { font-size: 1.45rem; }
+  .badr .bd-sub { font-size: .9rem; margin-top: .6rem; }
+}
+html:not(.fx-on) .badr .bd-t::before { display: none; }

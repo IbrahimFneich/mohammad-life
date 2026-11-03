@@ -1,0 +1,29 @@
+/* حراء والمبعث: inside the cave. The words keep to a right-hand column over the dark granite; the slit of sky, the
+   light and the Prophet ﷺ take the left and centre. The five verses come one by one as lines of light. On phones the
+   words sit on top over a scrim, the cave below. */
+.iqra .stage { background: #07080b; }
+.iqra .iq-col { top: 9vh; max-width: min(100%, 31rem); }
+.iqra .iq-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -40vh -4vw -30vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(6, 6, 8, .62), rgba(6, 6, 8, .3) 60%, rgba(6, 6, 8, 0));
+}
+.iqra .iq-c1 .qt { font-size: clamp(1.45rem, 2vw + .6rem, 2.5rem); max-width: 20ch; color: var(--paper); }
+.iqra .cap { font-size: clamp(1.15rem, 1vw + .7rem, 1.55rem); text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 22px rgba(0, 0, 0, .85); }
+.iqra .qt { text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 26px rgba(0, 0, 0, .85); }
+.iqra .iq-ay { top: 7vh; }
+.iqra .iq-ay .ayah { font-size: clamp(1.5rem, 1.9vw + .7rem, 2.6rem); line-height: 2.15; color: #ffeab0; }
+.iqra .iq-ay .ayah span {
+  display: block; will-change: opacity, filter;
+  text-shadow: 0 0 12px rgba(255, 214, 140, .85), 0 0 34px rgba(243, 190, 100, .55), 0 2px 18px rgba(6, 5, 3, .9);
+}
+.iqra .iq-rest .kick { color: var(--gold-hi); }
+@media (max-width: 640px) {
+  .iqra .iq-col { top: 5vh; left: 0; right: 0; max-width: 100%; }
+  .iqra .iq-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(6, 6, 8, .86) 58%, rgba(6, 6, 8, 0)); }
+  .iqra .iq-c1 .qt { font-size: 1.4rem; max-width: none; }
+  .iqra .cap { font-size: 1.1rem; }
+  .iqra .iq-ay { top: 3vh; }
+  .iqra .iq-ay .ayah { font-size: 1.3rem; line-height: 1.95; }
+}
+/* Play mode reads the five verses as one recitation, so show all five at once while it plays */
+html.playing .iq-ay span { opacity: 1 !important; filter: none !important; }

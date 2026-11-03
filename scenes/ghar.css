@@ -1,0 +1,21 @@
+/* الغار: the words keep to a right-hand column over a soft dark scrim; Thawr, the cave and the road north take the
+   left and centre. On phones the words sit on top, the mountain and the road below. */
+.ghar .stage { background: #070b16; }
+.ghar .gh-col { top: 8vh; max-width: min(100%, 31rem); }
+.ghar .gh-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -40vh -4vw -30vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(5, 7, 14, .64), rgba(5, 7, 14, .32) 60%, rgba(5, 7, 14, 0));
+}
+.ghar .gh-a1 .ayah { font-size: clamp(1.2rem, 1.3vw + .55rem, 1.8rem); line-height: 2.05; }
+.ghar .gh-a2 .ayah { font-size: clamp(1.3rem, 1.5vw + .6rem, 2.1rem); line-height: 2.05; }
+.ghar .cap { font-size: clamp(1.2rem, 1vw + .7rem, 1.6rem); text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 22px rgba(0, 0, 0, .85); }
+.ghar .ayah { text-shadow: 0 2px 26px rgba(4, 6, 14, .95), 0 0 2px rgba(4, 6, 14, .85); }
+@media (max-width: 640px) {
+  .ghar .gh-col { top: 5vh; left: 0; right: 0; max-width: 100%; }
+  .ghar .gh-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(5, 7, 14, .86) 58%, rgba(5, 7, 14, 0)); }
+  .ghar .gh-a1 .ayah, .ghar .gh-a2 .ayah { font-size: 1.1rem; line-height: 1.95; }
+  .ghar .cap { font-size: 1.15rem; }
+}
+/* the last words sit on the dawn sky: a lighter scrim so it does not read as a dark stain */
+.ghar .gh-rest::before { opacity: .5; }
+.ghar .gh-rest .cap { text-shadow: 0 1px 3px rgba(10, 12, 24, .9), 0 2px 18px rgba(10, 12, 24, .7); }

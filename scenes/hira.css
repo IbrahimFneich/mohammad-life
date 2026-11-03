@@ -1,0 +1,18 @@
+/* الغلاف: جبل النور ليلاً، وغار حراء، والنبي صلى الله عليه وآله جالسٌ في فم الغار. The title keeps to the right
+   (RTL) over a scrim; the mountain takes the left. On scroll the camera pushes into the cave and the Hira quotes
+   replace the title. */
+.hira .stage { background: #02060a; }
+.hira .stage::after { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: linear-gradient(to left, rgba(3, 7, 10, .82) 0%, rgba(3, 7, 10, .45) 34%, rgba(3, 7, 10, 0) 58%); }
+.hira .cover-meta, .hira .hr-title, .hira .ov, .hira .cover-hint { z-index: 2; }
+.hr-title { position: absolute; top: 0; bottom: 0; right: max(6vw, var(--gut-r)); margin: auto 0; height: fit-content; max-width: min(calc(100% - 32px), 36rem); }
+.hr-k { margin: 0; font: 500 .85rem var(--f-ui); color: var(--green-hi); letter-spacing: .02em; }
+.hr-name { margin: .2rem 0 0; font: 700 clamp(3rem, 6.4vw + .4rem, 6.6rem) / 1.3 var(--f-naskh); color: var(--pearl); text-shadow: 0 2px 34px rgba(0, 0, 0, .7); text-wrap: balance; }
+.hr-saw { margin: .1rem 0 0; font: 400 clamp(1.1rem, 1.2vw + .7rem, 1.7rem) var(--f-ruqaa); color: var(--gold-hi); }
+.hr-sub { margin: 1.1rem 0 0; font-size: 1.05em; line-height: 1.9; color: var(--fg); max-width: 30rem; text-wrap: pretty; }
+.hira .hr-q { top: 12vh; max-width: min(calc(100% - 32px), 32rem); }
+.hira .hr-q .qt { margin-top: 1.4rem; font-size: clamp(1.35rem, 1.7vw + .6rem, 2.3rem); }
+@media (max-width: 640px) {
+  .hira .stage::after { background: linear-gradient(to bottom, rgba(3, 7, 10, .9) 0%, rgba(3, 7, 10, .6) 42%, rgba(3, 7, 10, 0) 62%); }
+  .hr-title { top: 13vh; bottom: auto; margin: 0; right: var(--gut-r); left: var(--gut); max-width: none; }
+  .hira .hr-q { top: 9vh; left: var(--gut); right: var(--gut-r); }
+}

@@ -1,0 +1,19 @@
+/* الإسراء والمعراج: the words keep to a right-hand column over a soft dark scrim; the Haram, the night map, the
+   seven heavens and the Sidra take the left and centre. On phones the words sit on top, the light below. */
+.miraj .stage { background: #04060f; }
+.miraj .mj-col { top: 8vh; max-width: min(100%, 31rem); }
+.miraj .mj-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -40vh -4vw -30vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(3, 5, 12, .66), rgba(3, 5, 12, .34) 60%, rgba(3, 5, 12, 0));
+}
+.miraj .mj-a1 .ayah, .miraj .mj-a4 .ayah { font-size: clamp(1.2rem, 1.3vw + .55rem, 1.8rem); line-height: 2.05; }
+.miraj .mj-a5 .ayah { font-size: clamp(1.7rem, 2.3vw + .7rem, 3rem); line-height: 2; }
+.miraj .cap { font-size: clamp(1.2rem, 1vw + .7rem, 1.6rem); text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 22px rgba(0, 0, 0, .85); }
+.miraj .ayah { text-shadow: 0 2px 26px rgba(3, 4, 10, .95), 0 0 2px rgba(3, 4, 10, .85); }
+@media (max-width: 640px) {
+  .miraj .mj-col { top: 5vh; left: 0; right: 0; max-width: 100%; }
+  .miraj .mj-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(3, 5, 12, .86) 58%, rgba(3, 5, 12, 0)); }
+  .miraj .mj-a1 .ayah, .miraj .mj-a4 .ayah { font-size: 1.1rem; line-height: 1.95; }
+  .miraj .mj-a5 .ayah { font-size: 1.6rem; }
+  .miraj .cap { font-size: 1.15rem; }
+}

@@ -1,0 +1,19 @@
+/* الحديبية: the words keep to a right-hand column over a soft scrim; the camp, the mat and the sheet take the left
+   and centre. On phones the words sit on top, the action below. */
+.hudaybiya .stage { background: #14110e; }
+.hudaybiya .hd-col { top: 8vh; max-width: min(100%, 31rem); }
+.hudaybiya .hd-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -40vh -4vw -30vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(12, 9, 8, .62), rgba(12, 9, 8, .3) 60%, rgba(12, 9, 8, 0));
+}
+.hudaybiya .cap { font-size: clamp(1.15rem, 1vw + .65rem, 1.55rem); text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 22px rgba(0, 0, 0, .85); }
+.hudaybiya .ayah { text-shadow: 0 2px 26px rgba(8, 6, 10, .95), 0 0 2px rgba(8, 6, 10, .85); }
+.hudaybiya .hd-a1 .ayah { font-size: clamp(1.35rem, 1.6vw + .6rem, 2.2rem); line-height: 2.05; }
+.hudaybiya .hd-a2 .ayah { font-size: clamp(1.6rem, 2.2vw + .6rem, 2.8rem); line-height: 2.1; }
+@media (max-width: 640px) {
+  .hudaybiya .hd-col { top: 5vh; left: 0; right: 0; max-width: 100%; }
+  .hudaybiya .hd-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(12, 9, 8, .86) 58%, rgba(12, 9, 8, 0)); }
+  .hudaybiya .cap { font-size: 1.1rem; }
+  .hudaybiya .hd-a1 .ayah { font-size: 1.3rem; }
+  .hudaybiya .hd-a2 .ayah { font-size: 1.55rem; }
+}
