@@ -1,0 +1,34 @@
+/* Khaybar: the words keep to a right-hand column over a soft scrim (the camp beats); the assault keeps its captions low
+   on the right. On phones the words sit on top over a scrim; the action keeps to the lower half. */
+.khaybar .stage { background: var(--night); }
+.khaybar .kh-col { top: 8vh; width: min(37vw, 32rem); max-width: none; }
+.khaybar .kh-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -10vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(7, 9, 16, .55), rgba(7, 9, 16, .26) 62%, rgba(7, 9, 16, 0));
+}
+.khaybar .kh-col .cap { max-width: none; font-size: clamp(1rem, .55vw + .78rem, 1.28rem); text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 20px rgba(0, 0, 0, .8); }
+.khaybar .kh-col .qt { font-size: clamp(1.3rem, 1.25vw + .65rem, 2rem); line-height: 1.85; max-width: none; }
+.khaybar .kh-col .cap + .qt { margin-top: .3rem; }
+.khaybar .kh-gap { margin-top: 1rem; }
+.khaybar .kh-fath .ayah { font-size: clamp(1.5rem, 1.8vw + .6rem, 2.5rem); text-shadow: 0 2px 22px rgba(8, 6, 4, .95); }
+.khaybar .kh-duel, .khaybar .kh-gate { bottom: 9vh; width: min(36vw, 30rem); }
+.khaybar .kh-duel .cap, .khaybar .kh-gate .cap, .khaybar .kh-men .cap { max-width: none; }
+.khaybar .kh-men { bottom: 9vh; width: min(42vw, 34rem); }
+.khaybar .kh-row { display: flex; align-items: center; gap: 1.1rem; }
+.khaybar .kh-n { font-family: var(--f-kufi); font-weight: 600; font-size: clamp(3.2rem, 5vw, 5.4rem); line-height: 1; color: var(--gold-hi); text-shadow: 0 0 30px rgba(201, 165, 78, .45); min-width: 2ch; text-align: center; font-variant-numeric: tabular-nums; }
+.khaybar .kh-men .cap { font-family: var(--f-naskh); font-weight: 700; font-size: clamp(1.35rem, 1.2vw + .7rem, 2rem); }
+.khaybar .kh-pay { top: 7vh; right: 4vw; width: min(46vw, 40rem); max-width: none; }
+.khaybar .kh-pay .qt { font-size: clamp(1.3rem, 1.2vw + .7rem, 2rem); line-height: 1.9; max-width: none; color: var(--paper); text-shadow: 0 0 36px rgba(243, 217, 143, .2), 0 2px 24px rgba(0, 0, 0, .8); }
+@media (max-width: 640px) {
+  .khaybar .kh-col { top: 5vh; left: 0; right: 0; width: 100%; }
+  .khaybar .kh-col::before { inset: -8vh 0 -14vh; background: linear-gradient(to bottom, rgba(7, 9, 16, .84) 58%, rgba(7, 9, 16, 0)); }
+  .khaybar .kh-col .cap { font-size: .98rem; line-height: 1.85; }
+  .khaybar .kh-col .qt { font-size: 1.15rem; line-height: 1.8; }
+  .khaybar .kh-fath .ayah { font-size: 1.35rem; }
+  .khaybar .kh-duel, .khaybar .kh-gate, .khaybar .kh-men { right: 0; bottom: 5vh; width: 100%; }
+  .khaybar .kh-duel .cap, .khaybar .kh-gate .cap { font-size: 1.02rem; }
+  .khaybar .kh-men .cap { font-size: 1.2rem; }
+  .khaybar .kh-n { font-size: 2.8rem; }
+  .khaybar .kh-pay { top: 5vh; right: 0; width: 100%; }
+  .khaybar .kh-pay .qt { font-size: 1.12rem; line-height: 1.8; }
+}

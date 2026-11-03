@@ -1,0 +1,34 @@
+/* Khandaq: the words keep to a right-hand column over a soft scrim; the Prophet, the trench and the duel take the left
+   and centre. On phones the words sit on top over a scrim and the action keeps to the lower half. */
+.khandaq .kq-col { top: 8vh; width: min(36vw, 31rem); max-width: none; }
+.khandaq .kq-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -10vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(10, 9, 8, .5), rgba(10, 9, 8, .24) 62%, rgba(10, 9, 8, 0));
+}
+.khandaq .kq-col .cap { max-width: none; font-size: clamp(1rem, .55vw + .78rem, 1.28rem); text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 20px rgba(0, 0, 0, .8); }
+.khandaq .kq-col .qt { max-width: none; font-size: clamp(1.3rem, 1.3vw + .7rem, 2.1rem); line-height: 1.8; }
+.khandaq .kq-col .ayah { font-size: clamp(1.2rem, 1.15vw + .65rem, 1.85rem); line-height: 2.05; margin-top: 1.1rem; text-shadow: 0 2px 22px rgba(8, 6, 4, .95); }
+.khandaq .kq-col .kick + .cap, .khandaq .kq-col .cap + .qt { margin-top: .2rem; }
+.khandaq .kq-gap { margin-top: .7rem; }
+.khandaq .kq-dua { margin-top: 1rem; font-size: clamp(1.2rem, 1.1vw + .7rem, 1.85rem); }
+.khandaq .clash { top: 15vh; font-size: clamp(2rem, 5.2vw, 5rem); }
+.khandaq .cl-a { text-shadow: 0 0 34px rgba(243, 217, 143, .45), 0 2px 18px rgba(0, 0, 0, .6); }
+.khandaq .cl-b { color: #9a917e; text-shadow: 0 2px 18px rgba(0, 0, 0, .7); }
+.khandaq .flash { background: radial-gradient(circle at 50% 54%, rgba(255, 250, 232, .95), rgba(243, 217, 143, .32) 26%, transparent 58%); }
+.khandaq .kh-end { top: 7vh; }
+.khandaq .kh-end .ayah { font-size: clamp(1.6rem, 2.2vw + .6rem, 2.8rem); margin-inline: auto; }
+.khandaq .kh-end .qt { font-size: clamp(1.35rem, 1.7vw + .6rem, 2.3rem); max-width: 26ch; margin-top: 1.6rem; }
+.khandaq .kh-src2 { color: #b9b09a; }
+html:not(.fx-on) .khandaq .clash { position: relative; inset: auto; top: auto; flex-wrap: wrap; white-space: normal; padding-inline: 4vw; }
+@media (max-width: 640px) {
+  .khandaq .kq-col { top: 5vh; left: 0; right: 0; width: 100%; }
+  .khandaq .kq-col::before { inset: -8vh 0 -14vh; background: linear-gradient(to bottom, rgba(10, 9, 8, .82) 58%, rgba(10, 9, 8, 0)); }
+  .khandaq .kq-col .cap { font-size: .98rem; line-height: 1.85; }
+  .khandaq .kq-col .qt { font-size: 1.22rem; line-height: 1.75; }
+  .khandaq .kq-col .ayah { font-size: 1.12rem; line-height: 1.95; margin-top: .7rem; }
+  .khandaq .kq-dua { font-size: 1.1rem; }
+  .khandaq .clash { top: 9vh; font-size: 2.3rem; }
+  .khandaq .kh-end { top: 5vh; }
+  .khandaq .kh-end .ayah { font-size: 1.5rem; }
+  .khandaq .kh-end .qt { font-size: 1.3rem; }
+}

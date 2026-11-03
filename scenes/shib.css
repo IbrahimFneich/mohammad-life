@@ -1,0 +1,23 @@
+/* الشِّعب: the words keep to a right-hand column over the dark of the valley wall; the camp, the bed and the guard
+   take the left and centre. The year count sits top-left. On phones the words sit on top, the valley below. */
+.shib .stage { background: #06070c; }
+.shib .sb-col { top: 9vh; max-width: min(100%, 31rem); }
+.shib .sb-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -40vh -4vw -30vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(5, 6, 10, .64), rgba(5, 6, 10, .32) 60%, rgba(5, 6, 10, 0));
+}
+.shib .sb-c1 .qt { font-size: clamp(1.35rem, 1.7vw + .6rem, 2.2rem); max-width: 22ch; color: var(--paper); }
+.shib .cap { font-size: clamp(1.15rem, 1vw + .7rem, 1.55rem); text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 22px rgba(0, 0, 0, .85); }
+.shib .qt { text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 26px rgba(0, 0, 0, .85); }
+.shib .sb-n { position: absolute; z-index: 2; left: 5vw; top: 8vh; margin: 0; font: 600 clamp(2.6rem, 5vw, 4.6rem) / 1 var(--f-kufi); color: var(--gold-hi); text-shadow: 0 2px 22px rgba(0, 0, 0, .85); }
+.shib .sb-n span { position: absolute; left: 0; top: 0; opacity: 0; }
+.shib .sb-rest::before { opacity: .6; }
+.shib .sb-rest .cap { text-shadow: 0 1px 3px rgba(10, 12, 24, .9), 0 2px 18px rgba(10, 12, 24, .75); }
+@media (max-width: 640px) {
+  .shib .sb-col { top: 5vh; left: 0; right: 0; max-width: 100%; }
+  .shib .sb-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(5, 6, 10, .86) 58%, rgba(5, 6, 10, 0)); }
+  .shib .sb-c1 .qt { font-size: 1.3rem; max-width: none; }
+  .shib .cap { font-size: 1.08rem; }
+  .shib .sb-n { left: auto; right: var(--gut-r); top: auto; bottom: 5vh; font-size: 2.4rem; }
+  .shib .sb-n span { left: auto; right: 0; }
+}

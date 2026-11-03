@@ -1,0 +1,21 @@
+/* اليُتم والكفالة: one night landscape travelled from right to left. The words keep a right-hand column; the child, the
+   graves and the lit doorway take the left and centre. Names over the graves are placed by kafala.js. */
+.kafala .stage { background: #070a12; }
+.kafala .kf-col { top: 9vh; max-width: min(100%, 28rem); }
+.kafala .kf-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(5, 7, 12, .55), rgba(5, 7, 12, .25) 60%, rgba(5, 7, 12, 0));
+}
+.kafala .ayah { font-size: clamp(1.5rem, 2vw + .6rem, 2.5rem); text-shadow: 0 2px 26px rgba(4, 6, 10, .95), 0 0 2px rgba(4, 6, 10, .8); }
+.kafala .cap { font-size: 1.25em; max-width: 26ch; text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 22px rgba(0, 0, 0, .85); }
+.kafala .kf-names { position: absolute; z-index: 1; left: 0; top: 0; margin: 0; padding: 0; list-style: none; pointer-events: none; }
+.kafala .kf-names li { position: absolute; left: 0; top: 0; opacity: 0; white-space: nowrap; font: 500 1.02rem var(--f-kufi); color: var(--fg); text-shadow: 0 1px 8px rgba(0, 0, 0, .95), 0 0 2px rgba(0, 0, 0, .9); will-change: transform; }
+.kafala .kf-names li::after { content: ""; display: block; width: 1px; height: 1.1rem; margin: .35rem auto 0; background: linear-gradient(rgba(235, 227, 207, .5), rgba(235, 227, 207, 0)); }
+:root:not(.fx-on) .kafala .kf-open { display: none !important; }
+@media (max-width: 640px) {
+  .kafala .kf-col { top: 6vh; left: 0; right: 0; max-width: 100%; }
+  .kafala .kf-col::before { inset: -10vh 0 -12vh; background: linear-gradient(to bottom, rgba(5, 7, 12, .8) 55%, rgba(5, 7, 12, 0)); }
+  .kafala .ayah { font-size: 1.55rem; }
+  .kafala .cap { font-size: 1.1rem; }
+  .kafala .kf-names li { font-size: .8rem; }
+}
