@@ -1,0 +1,28 @@
+/* تبوك وحديث المنزلة: Medina at noon, the camp past Thaniyyat al-Wada', the column into the heat, a lane of Medina,
+   the ride to al-Jurf and the words there, a vision in gold of a mountain and a staff, the return, the camp at Tabuk.
+   The words keep a right-hand column over the upper picture; the action takes the left and centre. On phones the
+   words sit on top over a scrim and the action fills the lower half. */
+.tabuk .stage { background: #9fb4cc; }
+.tabuk .tb-col { top: 9vh; max-width: min(100%, 31rem); }
+.tabuk .tb-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(10, 12, 26, .64), rgba(10, 12, 26, .36) 58%, rgba(10, 12, 26, 0));
+}
+.tabuk .cap { font-size: clamp(1.1rem, .92vw + .7rem, 1.46rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.tabuk .qt { font-size: clamp(1.3rem, 1.6vw + .6rem, 2.1rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.tabuk .tb-mz .qt { font-size: clamp(1.6rem, 2.3vw + .6rem, 2.9rem); line-height: 1.6; max-width: 20ch; }
+.tabuk .ayah { font-size: clamp(1.3rem, 1.6vw + .6rem, 2.1rem); line-height: 2; text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 0 26px rgba(255, 214, 140, .35), 0 2px 22px rgba(4, 8, 18, .9); }
+.tabuk .kick { text-shadow: 0 1px 3px rgba(4, 8, 18, .95); }
+.tabuk .qt + .cap, .tabuk .cap + .qt, .tabuk .cap + .cap, .tabuk .cap + .ayah { margin-top: .45em; }
+@media (max-width: 640px) {
+  .tabuk .tb-col { top: 8vh; left: 0; right: 0; max-width: 100%; }
+  .tabuk .tb-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(10, 12, 26, .88) 60%, rgba(10, 12, 26, 0)); }
+  .tabuk .cap { font-size: 1.02rem; }
+  .tabuk .qt { font-size: 1.2rem; }
+  .tabuk .tb-mz .qt { font-size: 1.5rem; }
+  .tabuk .ayah { font-size: 1.2rem; line-height: 1.9; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's two figures on the left stay clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.tabuk .tb-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .tabuk .tb-col::before { display: none; }

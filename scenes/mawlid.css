@@ -1,0 +1,19 @@
+/* ليلة المولد: the words keep to a right-hand column over the night; the valley, the light and the far places take
+   the left and centre. On phones the words sit on top over a scrim, the picture below. */
+.mawlid .stage { background: #05070f; }
+.mawlid .ml-col { top: 9vh; max-width: min(100%, 31rem); }
+.mawlid .ml-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -36vh -4vw -26vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(4, 5, 10, .62), rgba(4, 5, 10, .3) 60%, rgba(4, 5, 10, 0));
+}
+.mawlid .cap { font-size: clamp(1.15rem, 1vw + .7rem, 1.55rem); text-shadow: 0 1px 3px rgba(0, 0, 0, .9), 0 2px 22px rgba(0, 0, 0, .85); }
+.mawlid .kick { text-shadow: 0 1px 3px rgba(0, 0, 0, .9); }
+@media (max-width: 640px) {
+  .mawlid .ml-col { top: 5vh; left: 0; right: 0; max-width: 100%; }
+  .mawlid .ml-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(4, 5, 10, .88) 58%, rgba(4, 5, 10, 0)); }
+  .mawlid .cap { font-size: 1.06rem; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's valley on the left stays clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.mawlid .ml-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .mawlid .ml-col::before { display: none; }

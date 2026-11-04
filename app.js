@@ -149,9 +149,9 @@ function render() {
 // Age runs continuously: from one chapter's age to the next across the chapter's height.
 // ---------- ambient sound: one bed per section, chosen by the place ----------
 const SOUND = {
-  top: 'night', nasab: 'night', fil: 'desert', mawlid: 'night', kafala: 'desert', khadija: 'desert', mabath: 'night', dar: 'night',
-  shib: 'wind', huzn: 'wind', miraj: 'night', hijra: 'night', madina: 'crowd', badr: 'battle', uhud: 'battle', khandaq: 'storm',
-  hudaybiya: 'desert', khaybar: 'battle', fath: 'crowd', hunayn: 'battle', mubahala: 'fire', ghadir: 'crowd', rahil: 'fire',
+  top: 'night', nur: 'still', nasab: 'night', fil: 'desert', mawlid: 'night', kafala: 'desert', bahira: 'desert', khadija: 'desert', hajar: 'crowd', mabath: 'night', dar: 'night', sadaa: 'crowd', abutalib: 'crowd', habasha: 'wind',
+  shib: 'wind', huzn: 'wind', aqaba: 'night', miraj: 'night', hijra: 'night', madina: 'crowd', qibla: 'mosque', badr: 'battle', uhud: 'battle', khandaq: 'storm',
+  hudaybiya: 'desert', kutub: 'desert', khaybar: 'battle', muta: 'battle', fath: 'crowd', hunayn: 'battle', tabuk: 'desert', baraa: 'crowd', mubahala: 'fire', ghadir: 'crowd', rahil: 'fire',
   khuluq: 'still', hadith: 'still', imams: 'wind', close: 'night', ziyara: 'mosque',
 };
 const soundBtn = $('#sound');
@@ -197,10 +197,10 @@ function hud() {
     const q = clamp01((mid - b.top) / b.h);
     const nx = chapters[i + 1];
     const a0 = +c.dataset.age;
-    const a1 = nx ? +nx.dataset.age : 63;
+    const a1 = c.dataset.ageEnd ? +c.dataset.ageEnd : nx ? +nx.dataset.age : 63; // data-age-end: the chapter ends at this age, not at the next chapter's
     const age = a0 + (a1 - a0) * q;
     hudY.textContent = whenOf(c);
-    hudA.textContent = age < .5 ? 'الولادة' : `العمر ${ar(Math.floor(age))}`;
+    hudA.textContent = 'unborn' in c.dataset || 'noage' in c.dataset ? '' : age < .5 ? 'الولادة' : `العمر ${ar(Math.floor(age))}`; // before his birth, or no sourced age: no age
     bar.style.transform = `scaleX(${(age / 63).toFixed(4)})`;
   } else {
     const before = sections.indexOf(c) < sections.indexOf(chapters[0]);

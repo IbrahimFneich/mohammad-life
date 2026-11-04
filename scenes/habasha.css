@@ -1,0 +1,25 @@
+/* الهجرة إلى الحبشة: the edge of Mecca, the Red Sea, the hall of the Negus, the return at Khaybar. The words keep a
+   right-hand column over the upper picture; the action takes the left and centre. On phones the words sit on top over
+   a scrim and the action fills the lower half. */
+.habasha .stage { background: #3a6a9c; }
+.habasha .hb-col { top: 9vh; max-width: min(100%, 31rem); }
+.habasha .hb-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(8, 16, 32, .62), rgba(8, 16, 32, .34) 58%, rgba(8, 16, 32, 0));
+}
+.habasha .cap { font-size: clamp(1.12rem, .95vw + .7rem, 1.5rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.habasha .qt, .habasha .ayah { text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.habasha .qt { font-size: clamp(1.4rem, 1.9vw + .6rem, 2.4rem); }
+.habasha .kick { text-shadow: 0 1px 3px rgba(4, 8, 18, .95); }
+.habasha .qt + .cap, .habasha .cap + .qt, .habasha .cap + .ayah, .habasha .cap + .cap { margin-top: .6em; }
+@media (max-width: 640px) {
+  .habasha .hb-col { top: 9vh; left: 0; right: 0; max-width: 100%; }
+  .habasha .hb-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(8, 14, 28, .86) 58%, rgba(8, 14, 28, 0)); }
+  .habasha .cap { font-size: 1.04rem; }
+  .habasha .qt { font-size: 1.28rem; }
+  .habasha .ayah { font-size: 1.3rem; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's meeting on the left stays clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.habasha .hb-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .habasha .hb-col::before { display: none; }

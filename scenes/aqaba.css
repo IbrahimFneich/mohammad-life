@@ -1,0 +1,24 @@
+/* بيعة العقبة: a dawn road out of Mecca toward Yathrib; then the night of the pledge at Mina, the house of 'Abd
+   al-Muttalib on its ledge above the ravine of the 'Aqaba, the tents and fires of the valley below; the dawn after.
+   The words keep a right-hand column over the upper picture; the action takes the left and centre. On phones the
+   words sit on top over a scrim and the action fills the lower half. */
+.aqaba .stage { background: #101a34; }
+.aqaba .aq-col { top: 9vh; max-width: min(100%, 31rem); }
+.aqaba .aq-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(6, 10, 24, .64), rgba(6, 10, 24, .36) 58%, rgba(6, 10, 24, 0));
+}
+.aqaba .cap { font-size: clamp(1.1rem, .92vw + .7rem, 1.46rem); text-shadow: 0 1px 3px rgba(4, 6, 16, .95), 0 2px 22px rgba(4, 6, 16, .9); }
+.aqaba .qt { font-size: clamp(1.36rem, 1.8vw + .6rem, 2.3rem); text-shadow: 0 1px 3px rgba(4, 6, 16, .95), 0 2px 22px rgba(4, 6, 16, .9); }
+.aqaba .kick { text-shadow: 0 1px 3px rgba(4, 6, 16, .95); }
+.aqaba .qt + .cap, .aqaba .cap + .qt, .aqaba .cap + .cap { margin-top: .6em; }
+@media (max-width: 640px) {
+  .aqaba .aq-col { top: 8vh; left: 0; right: 0; max-width: 100%; }
+  .aqaba .aq-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(6, 10, 24, .88) 60%, rgba(6, 10, 24, 0)); }
+  .aqaba .cap { font-size: 1.02rem; }
+  .aqaba .qt { font-size: 1.24rem; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's action on the left stays clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.aqaba .aq-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .aqaba .aq-col::before { display: none; }
