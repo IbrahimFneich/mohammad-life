@@ -45,6 +45,8 @@
 <link rel="stylesheet" href="scenes/kutub.css">
 <link rel="stylesheet" href="scenes/tabuk.css">
 <link rel="stylesheet" href="scenes/baraa.css">
+<link rel="stylesheet" href="scenes/khutba.css">
+<link rel="stylesheet" href="scenes/walk.css">
 <script>document.documentElement.lang = 'ar'; document.documentElement.dir = 'rtl'; if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('fx-on');</script>
 </head>
 <body dir="rtl" lang="ar">
@@ -174,6 +176,7 @@
   <div class="band paper"><div class="wrap prose">
     <p class="lead">البيت الأوّل</p>
     <blockquote class="pull">«وَلَمْ يَجْمَعْ بَيْتٌ وَاحِدٌ يَوْمَئِذٍ فِي الْإِسْلَامِ غَيْرَ رَسُولِ اللَّهِ صلى الله عليه وآله وَخَدِيجَةَ وَأَنَا ثَالِثُهُمَا، أَرَى نُورَ الْوَحْيِ وَالرِّسَالَةِ، وَأَشُمُّ رِيحَ النُّبُوَّةِ» <span class="src">نهج البلاغة، الخطبة ١٩٢</span></blockquote>
+    <button class="walk-go paper" type="button" data-walk>اصعد إلى غار حراء<span class="en" lang="en">Climb to the Cave of Hira</span></button>
   </div></div>
 </section>
 
@@ -384,9 +387,18 @@
   <!--@scene:kisa-->
 </section>
 
+<!-- ============ خطبة الوداع ============ -->
+<section class="chapter" id="khutba" data-title="خطبة الوداع" data-y="10" data-age="62" data-place="من المدينة إلى عرفات ومنى">
+  <header class="opener"><p class="op-k"><span class="op-n"></span><span>لخمسٍ بقين من ذي القعدة ١٠ هـ، في رواية المفيد</span><span>من المدينة إلى عرفات ومنى</span></p><h2 class="op-t" data-fx="o 0 1 .14 .34 | y 50px 0px .14 .4 out">خطبة الوداع</h2></header>
+  <!--@scene:khutba-->
+  <div class="band paper"><div class="wrap prose">
+    <p class="note-d">وفي الكافي عن الإمام الصادق عليه السلام: «فخرج رسول الله صلى الله عليه وآله في أربعٍ بقين من ذي القعدة». والمشهد هنا على رواية الشيخ المفيد. <span class="src">الكافي ٤:٢٤٥</span></p>
+  </div></div>
+</section>
+
 <!-- ============ ٢٣ الغدير ============ -->
-<section class="chapter" id="ghadir" data-title="حجّة الوداع والغدير" data-y="10" data-age="62" data-place="غدير خمّ، قرب الجحفة">
-  <header class="opener"><p class="op-k"><span class="op-n"></span><span>١٨ ذي الحجة ١٠ هـ</span><span>غدير خمّ</span></p><h2 class="op-t" data-fx="o 0 1 .14 .34 | y 50px 0px .14 .4 out">حجّة الوداع والغدير</h2></header>
+<section class="chapter" id="ghadir" data-title="الغدير" data-y="10" data-age="62" data-place="غدير خمّ، قرب الجحفة">
+  <header class="opener"><p class="op-k"><span class="op-n"></span><span>١٨ ذي الحجة ١٠ هـ</span><span>غدير خمّ</span></p><h2 class="op-t" data-fx="o 0 1 .14 .34 | y 50px 0px .14 .4 out">الغدير</h2></header>
   <!--@scene:ghadir-->
 </section>
 
@@ -476,7 +488,7 @@
 <section class="band paper chrono" id="chrono-sec" data-label="التسلسل">
   <div class="wrap">
     <p class="kick">التسلسل</p>
-    <h2 class="sec-t">حياته في <span data-count=".chapter">٣٤</span> فصلاً</h2>
+    <h2 class="sec-t">حياته في <span data-count=".chapter">٣٥</span> فصلاً</h2>
     <div class="tbl-wrap"><table class="chrono" id="chrono"><thead><tr><th>#</th><th>الفصل</th><th>التاريخ</th><th>عمره</th><th>المكان</th></tr></thead><tbody></tbody></table></div>
   </div>
 </section>
@@ -570,7 +582,9 @@
 <script src="scenes/kutub.js"></script>
 <script src="scenes/tabuk.js"></script>
 <script src="scenes/baraa.js"></script>
+<script src="scenes/khutba.js"></script>
 <script src="app.js"></script>
 <script src="scenes/play.js"></script>
+<script src="scenes/walk.js"></script>
 </body>
 </html>

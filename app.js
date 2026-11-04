@@ -151,7 +151,7 @@ function render() {
 const SOUND = {
   top: 'night', nur: 'still', nasab: 'night', fil: 'desert', mawlid: 'night', kafala: 'desert', bahira: 'desert', khadija: 'desert', hajar: 'crowd', mabath: 'night', dar: 'night', sadaa: 'crowd', abutalib: 'crowd', habasha: 'wind',
   shib: 'wind', huzn: 'wind', aqaba: 'night', miraj: 'night', hijra: 'night', madina: 'crowd', qibla: 'mosque', badr: 'battle', uhud: 'battle', khandaq: 'storm',
-  hudaybiya: 'desert', kutub: 'desert', khaybar: 'battle', muta: 'battle', fath: 'crowd', hunayn: 'battle', tabuk: 'desert', baraa: 'crowd', mubahala: 'fire', ghadir: 'crowd', rahil: 'fire',
+  hudaybiya: 'desert', kutub: 'desert', khaybar: 'battle', muta: 'battle', fath: 'crowd', hunayn: 'battle', tabuk: 'desert', baraa: 'crowd', mubahala: 'fire', khutba: 'crowd', ghadir: 'crowd', rahil: 'fire',
   khuluq: 'still', hadith: 'still', imams: 'wind', close: 'night', ziyara: 'mosque',
 };
 const soundBtn = $('#sound');
