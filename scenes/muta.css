@@ -1,0 +1,24 @@
+/* مؤتة: Medina at the army's going out; the march north through the highlands of al-Balqa'; the plain of Mu'ta and
+   the host of Rome; the banner; the mosque of Medina, Ja'far's door, the minbar, and the night. The words keep a
+   right-hand column over the upper picture; the action takes the left and centre. On phones the words sit on top over
+   a scrim and the action fills the lower half. */
+.muta .stage { background: #6d93b8; }
+.muta .mu-col { top: 9vh; max-width: min(100%, 31rem); }
+.muta .mu-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(10, 14, 30, .62), rgba(10, 14, 30, .34) 58%, rgba(10, 14, 30, 0));
+}
+.muta .cap { font-size: clamp(1.1rem, .92vw + .7rem, 1.46rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.muta .qt { font-size: clamp(1.36rem, 1.8vw + .6rem, 2.3rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.muta .kick { text-shadow: 0 1px 3px rgba(4, 8, 18, .95); }
+.muta .qt + .cap, .muta .cap + .qt { margin-top: .55em; }
+@media (max-width: 640px) {
+  .muta .mu-col { top: 8vh; left: 0; right: 0; max-width: 100%; }
+  .muta .mu-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(10, 14, 30, .88) 60%, rgba(10, 14, 30, 0)); }
+  .muta .cap { font-size: 1.02rem; }
+  .muta .qt { font-size: 1.24rem; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's night on the left stays clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.muta .mu-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .muta .mu-col::before { display: none; }

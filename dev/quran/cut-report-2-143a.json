@@ -1,0 +1,30 @@
+[
+{
+"clip": "2-143a",
+"r": "basit",
+"words": "13..40",
+"want": 44.55,
+"got": 44.61,
+"start": 23.68,
+"snap": "SE",
+"ds": -0.07,
+"de": -0.01,
+"est": "",
+"head_db": -54,
+"tail_db": -35
+},
+{
+"clip": "2-143a",
+"r": "minshawi",
+"words": "13..40",
+"want": 29.84,
+"got": 30.14,
+"start": 3417.2,
+"snap": "SE",
+"ds": 0.0,
+"de": 0.3,
+"est": "",
+"head_db": -39,
+"tail_db": -33
+}
+]

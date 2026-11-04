@@ -1,0 +1,23 @@
+/* كتبه إلى الملوك: Medina, the letters sealed, a painted map of the envoys' roads, then the courts of Rome, Persia,
+   Abyssinia and Alexandria, and back to Medina twice. The words keep a right-hand column over the upper picture; the
+   action takes the left and centre. On phones the words sit on top over a scrim and the action fills the lower half. */
+.kutub .stage { background: #6f8fb4; }
+.kutub .ku-col { top: 9vh; max-width: min(100%, 31rem); }
+.kutub .ku-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(10, 12, 26, .64), rgba(10, 12, 26, .36) 58%, rgba(10, 12, 26, 0));
+}
+.kutub .cap { font-size: clamp(1.1rem, .92vw + .7rem, 1.46rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.kutub .qt { font-size: clamp(1.3rem, 1.6vw + .6rem, 2.1rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.kutub .kick { text-shadow: 0 1px 3px rgba(4, 8, 18, .95); }
+.kutub .qt + .cap, .kutub .cap + .qt { margin-top: .45em; }
+@media (max-width: 640px) {
+  .kutub .ku-col { top: 8vh; left: 0; right: 0; max-width: 100%; }
+  .kutub .ku-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(10, 12, 26, .88) 60%, rgba(10, 12, 26, 0)); }
+  .kutub .cap { font-size: 1.02rem; }
+  .kutub .qt { font-size: 1.2rem; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's map on the left stays clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.kutub .ku-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .kutub .ku-col::before { display: none; }

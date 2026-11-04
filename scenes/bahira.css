@@ -1,0 +1,20 @@
+/* قافلة الشام: one day's road from Mecca to the hermitage near Busra, travelled from right to left. The words keep a
+   right-hand column over the deep blue of the upper sky; the caravan, the boy and the monk take the left and centre.
+   On phones the words sit on top over a scrim and the road fills the lower half. */
+.bahira .stage { background: #2a4a78; }
+.bahira .bh-col { top: 9vh; max-width: min(100%, 30rem); }
+.bahira .bh-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(8, 16, 32, .62), rgba(8, 16, 32, .34) 58%, rgba(8, 16, 32, 0));
+}
+.bahira .cap { font-size: clamp(1.12rem, .95vw + .7rem, 1.5rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.bahira .kick { text-shadow: 0 1px 3px rgba(4, 8, 18, .95); }
+@media (max-width: 640px) {
+  .bahira .bh-col { top: 9vh; left: 0; right: 0; max-width: 100%; }
+  .bahira .bh-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(8, 14, 28, .86) 58%, rgba(8, 14, 28, 0)); }
+  .bahira .cap { font-size: 1.04rem; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's road on the left stays clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.bahira .bh-col { max-width: 30rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .bahira .bh-col::before { display: none; }

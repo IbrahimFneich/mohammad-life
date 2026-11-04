@@ -1,0 +1,29 @@
+/* سورة براءة: Medina, the verses come down; the caravan goes out south; the word of Jibril; Ali sent on al-'Adba';
+   the ride and al-Rawha'; the return and the answer in Medina; Mina on the Day of Sacrifice, the proclamation and its
+   four lines of light; the Kaaba and the clothed circling. The words keep a right-hand column over the upper picture;
+   the action takes the left and centre. On phones the words sit on top over a scrim and the action fills the lower half. */
+.baraa .stage { background: #a9b9cc; }
+.baraa .br-col { top: 9vh; max-width: min(100%, 31rem); }
+.baraa .br-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(10, 12, 26, .64), rgba(10, 12, 26, .36) 58%, rgba(10, 12, 26, 0));
+}
+.baraa .cap { font-size: clamp(1.1rem, .92vw + .7rem, 1.46rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.baraa .qt { font-size: clamp(1.3rem, 1.6vw + .6rem, 2.1rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.baraa .br-big .qt { font-size: clamp(1.45rem, 1.9vw + .6rem, 2.4rem); line-height: 1.6; }
+.baraa .br-four span { display: block; text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 0 24px rgba(255, 214, 140, .45), 0 2px 22px rgba(4, 8, 18, .9); }
+.baraa .ayah { font-size: clamp(1.3rem, 1.6vw + .6rem, 2.1rem); line-height: 2; text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 0 26px rgba(255, 214, 140, .35), 0 2px 22px rgba(4, 8, 18, .9); }
+.baraa .kick { text-shadow: 0 1px 3px rgba(4, 8, 18, .95); }
+.baraa .qt + .cap, .baraa .cap + .qt, .baraa .cap + .cap, .baraa .cap + .ayah, .baraa .ayah + .cap { margin-top: .45em; }
+@media (max-width: 640px) {
+  .baraa .br-col { top: 8vh; left: 0; right: 0; max-width: 100%; }
+  .baraa .br-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(10, 12, 26, .88) 60%, rgba(10, 12, 26, 0)); }
+  .baraa .cap { font-size: 1.02rem; }
+  .baraa .qt { font-size: 1.2rem; }
+  .baraa .br-big .qt { font-size: 1.32rem; }
+  .baraa .ayah { font-size: 1.2rem; line-height: 1.9; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's figures on the left stay clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.baraa .br-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .baraa .br-col::before { display: none; }

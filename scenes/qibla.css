@@ -1,0 +1,24 @@
+/* تحويل القبلة: a night over the palms of Medina; then noon in the mosque of Bani Salim, the rows facing north, the turn
+   of the whole congregation to the south, and a wide view of the oasis at the end. The words keep a right-hand column
+   over the upper picture; the action takes the left and centre. On phones the words sit on top over a scrim and the
+   action fills the lower half. */
+.qibla .stage { background: #6f9cc8; }
+.qibla .qb-col { top: 9vh; max-width: min(100%, 31rem); }
+.qibla .qb-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(8, 14, 32, .62), rgba(8, 14, 32, .34) 58%, rgba(8, 14, 32, 0));
+}
+.qibla .cap { font-size: clamp(1.1rem, .92vw + .7rem, 1.46rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.qibla .ayah { font-size: clamp(1.3rem, 1.6vw + .6rem, 2.1rem); line-height: 2; text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 0 26px rgba(255, 214, 140, .35), 0 2px 22px rgba(4, 8, 18, .9); }
+.qibla .kick { text-shadow: 0 1px 3px rgba(4, 8, 18, .95); }
+.qibla .cap + .ayah, .qibla .ayah + .cap { margin-top: .5em; }
+@media (max-width: 640px) {
+  .qibla .qb-col { top: 8vh; left: 0; right: 0; max-width: 100%; }
+  .qibla .qb-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(8, 14, 32, .88) 60%, rgba(8, 14, 32, 0)); }
+  .qibla .cap { font-size: 1.02rem; }
+  .qibla .ayah { font-size: 1.2rem; line-height: 1.9; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's action on the left stays clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.qibla .qb-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .qibla .qb-col::before { display: none; }

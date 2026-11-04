@@ -1,0 +1,19 @@
+/* أولاده: a family tree of names in light over the night (canvas). The words keep a right-hand column; the tree takes
+   the left and centre. On phones the words sit on top over a scrim and the tree fills the lower half. */
+.awlad .stage { background: #060c11; }
+.awlad .aw-col { top: 9vh; max-width: min(100%, 30rem); }
+.awlad .aw-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(4, 8, 12, .66), rgba(4, 8, 12, .34) 58%, rgba(4, 8, 12, 0));
+}
+.awlad .cap { font-size: clamp(1.12rem, .95vw + .7rem, 1.5rem); text-shadow: 0 1px 3px rgba(2, 5, 8, .95), 0 2px 22px rgba(2, 5, 8, .9); }
+.awlad .kick { text-shadow: 0 1px 3px rgba(2, 5, 8, .95); }
+@media (max-width: 640px) {
+  .awlad .aw-col { top: 7vh; left: 0; right: 0; max-width: 100%; }
+  .awlad .aw-col::before { inset: -8vh 0 -12vh; background: linear-gradient(to bottom, rgba(4, 8, 12, .9) 62%, rgba(4, 8, 12, 0)); }
+  .awlad .cap { font-size: 1rem; line-height: 1.85; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's tree on the left stays clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.awlad .aw-col { max-width: 30rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .awlad .aw-col::before { display: none; }
