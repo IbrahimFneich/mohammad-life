@@ -1,0 +1,29 @@
+/* خطبة الوداع: Medina and the call, the white column on the road, the heights over Mecca, the House, 'Arafat from noon
+   to sunset, Mina and its rise, the yard of al-Khayf, the departure at dusk. The words keep a right-hand column over the
+   upper picture; the action takes the left and centre. On phones the words sit on top over a scrim, the action below. */
+.khutba .stage { background: #a8b8cc; }
+.khutba .kh-col { top: 9vh; max-width: min(100%, 31rem); }
+.khutba .kh-col::before {
+  content: ""; position: absolute; z-index: -1; inset: -30vh -4vw -24vh -12vw; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(10, 12, 26, .64), rgba(10, 12, 26, .36) 58%, rgba(10, 12, 26, 0));
+}
+.khutba .cap { font-size: clamp(1.1rem, .92vw + .7rem, 1.46rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.khutba .qt { font-size: clamp(1.3rem, 1.6vw + .6rem, 2.1rem); text-shadow: 0 1px 3px rgba(4, 8, 18, .95), 0 2px 22px rgba(4, 8, 18, .9); }
+.khutba .kh-big .qt { font-size: clamp(1.4rem, 1.9vw + .6rem, 2.4rem); line-height: 1.65; }
+.khutba .kh-shahid { top: 22vh; }
+.khutba .kh-shahid .qt { font-size: clamp(1.9rem, 3vw + .6rem, 3.6rem); line-height: 1.7; max-width: 14ch; }
+.khutba .kh-shahid .qt span { display: inline; }
+.khutba .kick { text-shadow: 0 1px 3px rgba(4, 8, 18, .95); }
+.khutba .qt + .cap, .khutba .cap + .qt, .khutba .cap + .cap, .khutba .qt + .qt { margin-top: .45em; }
+@media (max-width: 640px) {
+  .khutba .kh-col { top: 8vh; left: 0; right: 0; max-width: 100%; }
+  .khutba .kh-col::before { inset: -10vh 0 -14vh; background: linear-gradient(to bottom, rgba(10, 12, 26, .88) 60%, rgba(10, 12, 26, 0)); }
+  .khutba .cap { font-size: 1.02rem; }
+  .khutba .qt, .khutba .kh-big .qt { font-size: 1.2rem; line-height: 1.6; }
+  .khutba .kh-shahid { top: 12vh; }
+  .khutba .kh-shahid .qt { font-size: 1.9rem; max-width: none; }
+}
+/* Reduced motion: the stacked words keep to the right, so the still frame's riders on the left stay clear */
+@media (min-width: 821px) { :root:not(.fx-on) .scene.khutba .kh-col { max-width: 31rem; margin-left: auto; margin-right: 4vw; } }
+/* Reduced motion: each stacked caption has its own panel; the scrims would darken the one above */
+:root:not(.fx-on) .khutba .kh-col::before { display: none; }

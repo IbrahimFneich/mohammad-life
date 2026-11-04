@@ -45,6 +45,8 @@
 <link rel="stylesheet" href="scenes/kutub.css">
 <link rel="stylesheet" href="scenes/tabuk.css">
 <link rel="stylesheet" href="scenes/baraa.css">
+<link rel="stylesheet" href="scenes/khutba.css">
+<link rel="stylesheet" href="scenes/walk.css">
 <script>document.documentElement.lang = 'ar'; document.documentElement.dir = 'rtl'; if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('fx-on');</script>
 </head>
 <body dir="rtl" lang="ar">
@@ -75,6 +77,7 @@
       <h1 class="hr-name">مُحَمَّدٌ رَسُولُ اللَّهِ</h1>
       <p class="hr-saw">صلى الله عليه وآله</p>
       <p class="hr-sub">من عام الفيل إلى صفر سنة ١١ للهجرة، كما ترويها كتب الإمامية</p>
+      <button class="walk-go" type="button" data-walk>اصعد إلى غار حراء<span class="en" lang="en">Climb to the Cave of Hira</span></button>
     </div>
     <div class="ov ov-tr hr-q" data-fx="o 0 1 .5 .6 | y 24px 0px .5 .62 out">
       <p class="ayah">﴿اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ﴾</p>
@@ -299,6 +302,7 @@
   <div class="band paper"><div class="wrap prose">
     <p class="lead">البيت الأوّل</p>
     <blockquote class="pull">«وَلَمْ يَجْمَعْ بَيْتٌ وَاحِدٌ يَوْمَئِذٍ فِي الْإِسْلَامِ غَيْرَ رَسُولِ اللَّهِ صلى الله عليه وآله وَخَدِيجَةَ وَأَنَا ثَالِثُهُمَا، أَرَى نُورَ الْوَحْيِ وَالرِّسَالَةِ، وَأَشُمُّ رِيحَ النُّبُوَّةِ» <span class="src">نهج البلاغة، الخطبة ١٩٢</span></blockquote>
+    <button class="walk-go paper" type="button" data-walk>اصعد إلى غار حراء<span class="en" lang="en">Climb to the Cave of Hira</span></button>
   </div></div>
 </section>
 
@@ -967,9 +971,41 @@
 
 </section>
 
+<!-- ============ خطبة الوداع ============ -->
+<section class="chapter" id="khutba" data-title="خطبة الوداع" data-y="10" data-age="62" data-place="من المدينة إلى عرفات ومنى">
+  <header class="opener"><p class="op-k"><span class="op-n"></span><span>لخمسٍ بقين من ذي القعدة ١٠ هـ، في رواية المفيد</span><span>من المدينة إلى عرفات ومنى</span></p><h2 class="op-t" data-fx="o 0 1 .14 .34 | y 50px 0px .14 .4 out">خطبة الوداع</h2></header>
+  <div class="scene sig khutba" data-scene="khutba" data-rest="0.49" style="--len:2800vh">
+  <div class="stage">
+    <canvas class="cv" aria-hidden="true"></canvas>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 -.03 .01 | y 24px 0px -.03 .03 out | o 1 0 .05 .058"><p class="kick">النداء بالحجّ</p><p class="cap">«إنّ رسول الله صلى الله عليه وآله أقام بالمدينة عشر سنين لم يحجّ، ثمّ أنزل الله عزّ وجلّ عليه: ﴿وَأَذِّنْ فِي النَّاسِ بِالْحَجِّ يَأْتُوكَ رِجالًا وَعَلى كُلِّ ضامِرٍ يَأْتِينَ مِنْ كُلِّ فَجٍّ عَمِيقٍ﴾»</p><span class="src">الكافي ٤:٢٤٥، عن معاوية بن عمّار عن أبي عبد الله عليه السلام · الحجّ ٢٧</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .07 .082 | y 24px 0px .07 .094 out | o 1 0 .112 .12"><p class="kick">بأعلى أصواتهم</p><p class="cap">«فأمر المؤذّنين أن يؤذّنوا بأعلى أصواتهم بأنّ رسول الله صلى الله عليه وآله يحجّ في عامه هذا، فعلم به من حضر المدينة وأهل العوالي والأعراب، واجتمعوا لحجّ رسول الله صلى الله عليه وآله»</p><span class="src">الكافي ٤:٢٤٥</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .132 .144 | y 24px 0px .132 .156 out | o 1 0 .186 .196"><p class="kick">التلبية</p><p class="cap">«فتجهّز الناس للخروج وتأهّبوا معه … فخرج النبيّ صلى الله عليه وآله بهم لخمسٍ بقين من ذي القعدة … وأحرم من ذي الحليفة وأحرم الناس معه، ولبّى عليه السلام من عند الميل الذي بالبيداء، فاتّصل ما بين الحرمين بالتلبية»</p><p class="cap">«وكان الناس معه ركباناً ومشاةً»</p><span class="src">الإرشاد للشيخ المفيد ١:١٧١–١٧٢</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .21 .222 | y 24px 0px .21 .234 out | o 1 0 .244 .252"><p class="kick">من طريق اليمن</p><p class="cap">«فلمّا قارب رسول الله صلى الله عليه وآله مكّة من طريق المدينة، قاربها أمير المؤمنين عليه السلام من طريق اليمن، وتقدّم الجيش للقاء النبيّ صلى الله عليه وآله … فأدرك النبيّ عليه وآله السلام وقد أشرف على مكّة، فسلّم وخبّره بما صنع»</p><span class="src">الإرشاد للشيخ المفيد ١:١٧٢</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .262 .274 | y 24px 0px .262 .286 out | o 1 0 .302 .31"><p class="kick">إهلالاً كإهلال نبيّك</p><p class="cap">«فسُرّ رسول الله صلى الله عليه وآله بذلك وابتهج بلقائه وقال له:»</p><p class="qt">«بما أهللت يا عليّ؟»</p><p class="cap">«فقال له: يا رسول الله، إنّك لم تكتب إليّ بإهلالك ولا عرّفتنيه، فعقدت نيّتي بنيّتك، وقلت: اللهمّ إهلالاً كإهلال نبيّك، وسقت معي من البدن أربعاً وثلاثين بدنة، فقال رسول الله صلى الله عليه وآله:»</p><p class="qt">«الله أكبر، فقد سقت أنا ستّاً وستّين، وأنت شريكي في حجّي ومناسكي وهديي، فأقم على إحرامك وعُد إلى جيشك فعجّل بهم إليّ حتّى نجتمع بمكّة إن شاء الله»</p><span class="src">الإرشاد للشيخ المفيد ١:١٧٢</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .324 .336 | y 24px 0px .324 .348 out | o 1 0 .362 .37"><p class="kick">سبعة أشواط</p><p class="cap">«… حتّى انتهى إلى مكّة في سلخ أربعٍ من ذي الحجّة، فطاف بالبيت سبعة أشواط، ثمّ صلّى ركعتين خلف مقام إبراهيم عليه السلام»</p><span class="src">الكافي ٤:٢٤٥</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .384 .396 | y 24px 0px .384 .408 out | o 1 0 .426 .434"><p class="kick">بنمرة</p><p class="cap">«… حتّى انتهى إلى نمرة، وهي بطن عرنة بحيال الأراك، فضُربت قبّته، وضرب الناس أخبيتهم عندها، فلمّا زالت الشمس خرج رسول الله صلى الله عليه وآله ومعه قريش، وقد اغتسل وقطع التلبية، حتّى وقف بالمسجد، فوعظ الناس وأمرهم ونهاهم»</p><span class="src">الكافي ٤:٢٤٧</span></div>
+    <div class="ov ov-tr kh-col kh-big" data-fx="o 0 1 .45 .462 | y 24px 0px .45 .474 out | o 1 0 .506 .514"><p class="kick">أخفاف ناقته</p><p class="cap">«ثمّ صلّى الظهر والعصر بأذانٍ وإقامتين، ثمّ مضى إلى الموقف فوقف به، فجعل الناس يبتدرون أخفاف ناقته يقفون إلى جانبها، فنحّاها، ففعلوا مثل ذلك، فقال:»</p><p class="qt">«أيّها الناس، ليس موضع أخفاف ناقتي بالموقف، ولكن هذا كلّه»</p><p class="cap">«وأومأ بيده إلى الموقف، فتفرّق الناس»</p><span class="src">الكافي ٤:٢٤٧</span></div>
+    <div class="ov ov-tr kh-col kh-big" data-fx="o 0 1 .53 .542 | y 24px 0px .53 .554 out | o 1 0 .582 .59"><p class="kick">مغفوراً لكم</p><p class="cap">«لمّا وقف بعرفة وهمّت الشمس أن تغيب قال رسول الله صلى الله عليه وآله: يا بلال، قل للناس فلينصتوا، فلمّا نصتوا قال رسول الله صلى الله عليه وآله:»</p><p class="qt">«إنّ ربّكم تطوّل عليكم في هذا اليوم، فغفر لمحسنكم، وشفّع محسنكم في مسيئكم، فأفيضوا مغفوراً لكم»</p><p class="cap">«قال: وزاد غير الثماليّ أنّه قال: إلا أهل التبعات، فإنّ الله عدلٌ يأخذ للضعيف من القويّ»</p><span class="src">الكافي ٤:٢٥٨، عن أبي حمزة الثماليّ عن عليّ بن الحسين عليه السلام</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .602 .612 | y 24px 0px .602 .622 out | o 1 0 .628 .636"><p class="kick">وقع القرص</p><p class="cap">«فوقف الناس حتّى وقع القرص، قرص الشمس، ثمّ أفاض وأمر الناس بالدعة»</p><p class="cap">«فلمّا كانت ليلة جمعٍ لم يزل يناجي ربّه ويسأله لأهل التبعات … وضمن لأهل التبعات من عنده الرضا»</p><span class="src">الكافي ٤:٢٤٧، ٤:٢٥٨</span></div>
+    <div class="ov ov-tr kh-col kh-big" data-fx="o 0 1 .652 .664 | y 24px 0px .652 .676 out | o 1 0 .682 .69"><p class="kick">بمنى</p><p class="cap">«إنّ رسول الله صلى الله عليه وآله وقف بمنى حين قضى مناسكها في حجّة الوداع، فقال:»</p><p class="qt">«أيّها الناس، اسمعوا ما أقول لكم واعقلوه عنّي، فإنّي لا أدري لعلّي لا ألقاكم في هذا الموقف بعد عامنا هذا»</p><span class="src">الكافي ٧:٢٧٣، عن زيد الشحّام عن أبي عبد الله عليه السلام</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .7 .712 | y 24px 0px .7 .724 out | o 1 0 .73 .738"><p class="kick">أعظم حرمة</p><p class="cap">«ثمّ قال: أيّ يومٍ أعظم حرمة؟ قالوا: هذا اليوم، قال: فأيّ شهرٍ أعظم حرمة؟ قالوا: هذا الشهر، قال: فأيّ بلدٍ أعظم حرمة؟ قالوا: هذا البلد، قال:»</p><p class="qt">«فإنّ دماءكم وأموالكم عليكم حرامٌ كحرمة يومكم هذا، في شهركم هذا، في بلدكم هذا، إلى يوم تلقونه فيسألكم عن أعمالكم»</p><span class="src">الكافي ٧:٢٧٣</span></div>
+    <div class="ov ov-tr kh-col kh-shahid" data-fx="o 0 1 .746 .754 | o 1 0 .768 .775"><p class="qt"><span data-fx="o 0 1 .746 .752 | bl 8px 0px .746 .754">«ألا هل بلّغت؟</span> <span data-fx="o 0 1 .753 .758 | bl 8px 0px .753 .76">قالوا: نعم،</span> <span data-fx="o 0 1 .758 .763 | bl 8px 0px .758 .765">قال: اللهمّ اشهد»</span></p><span class="src">الكافي ٧:٢٧٣</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .782 .79 | y 24px 0px .782 .8 out | o 1 0 .802 .81"><p class="kick">ولا ترجعوا بعدي كفّاراً</p><p class="cap">«ألا من كانت عنده أمانة فليؤدّها إلى من ائتمنه عليها، فإنّه لا يحلّ دم امرئٍ مسلمٍ ولا ماله إلا بطيبة نفسه، ولا تظلموا أنفسكم، ولا ترجعوا بعدي كفّاراً»</p><span class="src">الكافي ٧:٢٧٣</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .818 .826 | y 24px 0px .818 .834 out | o 1 0 .838 .846"><p class="kick">إلا بالتقوى</p><p class="cap">«ألا وكلّ مأثرةٍ أو بدعةٍ كانت في الجاهلية أو دمٍ أو مالٍ فهو تحت قدميّ هاتين، ليس أحدٌ أكرم من أحدٍ إلا بالتقوى»</p><span class="src">تفسير القمي ١:١٧١، من قوله بمنى</span></div>
+    <div class="ov ov-tr kh-col kh-big" data-fx="o 0 1 .852 .86 | y 24px 0px .852 .868 out | o 1 0 .874 .882"><p class="kick">لن يفترقا</p><p class="qt">«ألا وإنّي قد تركت فيكم أمرين، إن أخذتم بهما لن تضلّوا: كتاب الله وعترتي أهل بيتي، فإنّه قد نبّأني اللطيف الخبير أنّهما لن يفترقا حتّى يردا عليّ الحوض، ألا فمن اعتصم بهما فقد نجا، ومن خالفهما فقد هلك»</p><span class="src">تفسير القمي ١:١٧٢، من قوله بمنى</span></div>
+    <div class="ov ov-tr kh-col" data-fx="o 0 1 .89 .9 | y 24px 0px .89 .912 out | o 1 0 .924 .932"><p class="kick">في مسجد الخيف</p><p class="cap">«أنّ رسول الله صلى الله عليه وآله خطب الناس في مسجد الخيف فقال:»</p><p class="qt">«نضّر الله عبداً سمع مقالتي فوعاها وحفظها، وبلّغها من لم يسمعها، فربّ حامل فقهٍ غير فقيه، وربّ حامل فقهٍ إلى من هو أفقه منه»</p><p class="cap">«ثلاثٌ لا يغلّ عليهنّ قلب امرئٍ مسلم: إخلاص العمل لله، والنصيحة لأئمّة المسلمين، واللزوم لجماعتهم، فإنّ دعوتهم محيطةٌ من ورائهم، المسلمون إخوةٌ تتكافأ دماؤهم، ويسعى بذمّتهم أدناهم»</p><span class="src">الكافي ١:٤٠٣، عن ابن أبي يعفور عن أبي عبد الله عليه السلام</span></div>
+    <div class="ov ov-tr kh-col kh-rest" data-fx="o 0 1 .944 .954 | y 24px 0px .944 .964 out"><p class="kick">فودّعهم</p><p class="cap">«وخطب رسول الله صلّى الله عليه وآله الناس يوم النفر من منى فودّعهم»</p><p class="cap">«ولمّا قضى رسول الله صلى الله عليه وآله نسكه أشرك عليّاً عليه السلام في هديه، وقفل إلى المدينة وهو معه والمسلمون»</p><span class="src">إعلام الورى للطبرسي ١:٢٦١ · الإرشاد ١:١٧٤</span></div>
+  </div>
+</div>
+
+  <div class="band paper"><div class="wrap prose">
+    <p class="note-d">وفي الكافي عن الإمام الصادق عليه السلام: «فخرج رسول الله صلى الله عليه وآله في أربعٍ بقين من ذي القعدة». والمشهد هنا على رواية الشيخ المفيد. <span class="src">الكافي ٤:٢٤٥</span></p>
+  </div></div>
+</section>
+
 <!-- ============ ٢٣ الغدير ============ -->
-<section class="chapter" id="ghadir" data-title="حجّة الوداع والغدير" data-y="10" data-age="62" data-place="غدير خمّ، قرب الجحفة">
-  <header class="opener"><p class="op-k"><span class="op-n"></span><span>١٨ ذي الحجة ١٠ هـ</span><span>غدير خمّ</span></p><h2 class="op-t" data-fx="o 0 1 .14 .34 | y 50px 0px .14 .4 out">حجّة الوداع والغدير</h2></header>
+<section class="chapter" id="ghadir" data-title="الغدير" data-y="10" data-age="62" data-place="غدير خمّ، قرب الجحفة">
+  <header class="opener"><p class="op-k"><span class="op-n"></span><span>١٨ ذي الحجة ١٠ هـ</span><span>غدير خمّ</span></p><h2 class="op-t" data-fx="o 0 1 .14 .34 | y 50px 0px .14 .4 out">الغدير</h2></header>
   <div class="scene sig ghadir" data-scene="ghadir" data-rest="0.73" style="--len:800vh">
   <div class="stage">
     <canvas class="cv" aria-hidden="true"></canvas>
@@ -1092,7 +1128,7 @@
 <section class="band paper chrono" id="chrono-sec" data-label="التسلسل">
   <div class="wrap">
     <p class="kick">التسلسل</p>
-    <h2 class="sec-t">حياته في <span data-count=".chapter">٣٤</span> فصلاً</h2>
+    <h2 class="sec-t">حياته في <span data-count=".chapter">٣٥</span> فصلاً</h2>
     <div class="tbl-wrap"><table class="chrono" id="chrono"><thead><tr><th>#</th><th>الفصل</th><th>التاريخ</th><th>عمره</th><th>المكان</th></tr></thead><tbody></tbody></table></div>
   </div>
 </section>
@@ -1186,7 +1222,9 @@
 <script src="scenes/kutub.js"></script>
 <script src="scenes/tabuk.js"></script>
 <script src="scenes/baraa.js"></script>
+<script src="scenes/khutba.js"></script>
 <script src="app.js"></script>
 <script src="scenes/play.js"></script>
+<script src="scenes/walk.js"></script>
 </body>
 </html>
